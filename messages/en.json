@@ -1,0 +1,24 @@
+{
+  "navbar": {
+    "title": "🌿HealJai.me",
+    "addQuote": "เพิ่มคำคม"
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "search": {
+    "placeholder": "Search Quotes"
+  },
+  "categoryTags": {
+    "random": "Random",
+    "selfGrowth": "Self Growth",
+    "overcomingFailure": "Overcoming Failure",
+    "motivation": "Motivation",
+    "selfBelief": "Self Belief",
+    "perseverance": "Perseverance",
+    "love": "Love",
+    "nature": "Nature",
+    "userGenerated": "From Users"
+  }
+}

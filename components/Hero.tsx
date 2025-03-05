@@ -7,7 +7,7 @@ const Hero = () => {
             Playful Text Gallery
         </h1>
         <p className='text-center text-lg text-gray-700 dark:text-gray-300'>
-        Discover a collection of inspiring quotes and thoughts to brighten your day. Take your time exploring - the longer you stay, the more gems you'll find!
+        Discover a collection of inspiring quotes and thoughts to brighten your day. Take your time exploring - the longer you stay, the more gems you&apos;ll find!
         </p>
     </div>
   )

@@ -1,4 +1,3 @@
-// components/QuoteDialog.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -13,9 +12,13 @@ interface QuoteDialogProps {
   onClose: () => void;
   text: string;
   author: string;
+  like: number;
+  favorite: number;
+  share: number;
+  index: number;
 }
 
-const QuoteDialog: React.FC<QuoteDialogProps> = ({ isOpen, onClose, text, author }) => {
+const QuoteDialog: React.FC<QuoteDialogProps> = ({ isOpen, onClose, text, author, like, favorite, share, }) => {
   const [liked, setLiked] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
   const [shared, setShared] = useState(false);
@@ -38,7 +41,7 @@ const QuoteDialog: React.FC<QuoteDialogProps> = ({ isOpen, onClose, text, author
             </div>
             <div>
               <p className='text-2xl font-medium mb-4 dark:text-slate-900'>
-                "{text}"
+              &quot;{text}&quot;
               </p>
               <p className='text-lg text-muted-foreground text-slate-400 dark:text-slate-700'>
                 — {author}
@@ -61,7 +64,7 @@ const QuoteDialog: React.FC<QuoteDialogProps> = ({ isOpen, onClose, text, author
                     <path d='m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z' />
                   </svg>
                   <span className={liked ? 'text-red-500' : ''}>
-                    {liked ? '5.3k' : '5.2k'}
+                    {like}
                   </span>
                 </button>
                 <button
@@ -79,7 +82,7 @@ const QuoteDialog: React.FC<QuoteDialogProps> = ({ isOpen, onClose, text, author
                     <path d='M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z' />
                   </svg>
                   <span className={bookmarked ? 'text-yellow-500' : ''}>
-                    {bookmarked ? '1.3k' : '1.2k'}
+                    {favorite}
                   </span>
                 </button>
                 <button
@@ -97,7 +100,7 @@ const QuoteDialog: React.FC<QuoteDialogProps> = ({ isOpen, onClose, text, author
                     <path d='M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z' />
                   </svg>
                   <span className={shared ? 'text-yellow-500' : ''}>
-                    {shared ? '1.3k' : '1.2k'}
+                    {share}
                   </span>
                 </button>
               </div>

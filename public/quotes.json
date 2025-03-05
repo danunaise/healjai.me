@@ -1,0 +1,25 @@
+[
+  {
+    "category": "self_growth",
+    "quote": [
+      {
+        "language": "TH",
+        "text": "เวลาของคุณมีจำกัด อย่าเสียเวลาไปกับการใช้ชีวิตของคนอื่น",
+        "author": "Steve Jobs"
+      },
+      {
+        "language": "EN",
+        "text": "Your time is limited, so don’t waste it living someone else’s life.",
+        "author": "Steve Jobs"
+      }
+    ],
+    "view" : 0,
+    "like" : 0,
+    "favorite" : 0,
+    "share" : 0,
+    "created_by" : "admin",
+    "created_at" : "2021-01-01 00:00:00",
+    "updated_by" : "admin",
+    "updated_at" : "2021-01-01 00:00:00"
+  }
+]

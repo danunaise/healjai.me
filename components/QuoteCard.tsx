@@ -1,18 +1,23 @@
-// components/QuoteCard.tsx
 'use client';
 
 import React from 'react';
-import { Star } from 'lucide-react';
+import { Eye, Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface QuoteCardProps {
   text: string;
   author: string;
+  views: number;
+  like: number;
+  favorite: number;
+  share: number;
   index: number;
   onClick: () => void;
 }
 
-const QuoteCard: React.FC<QuoteCardProps> = ({ text, author, index, onClick }) => {
-    const delay = `${index * 100}ms`;
+const QuoteCard: React.FC<QuoteCardProps> = ({ text, author, views, index, onClick }) => {
+  const t = useTranslations('categoryTags');
+  const delay = `${index * 100}ms`;
   return (
     <div
       className='group relative overflow-hidden rounded-2xl cursor-pointer transition-all hover:shadow-xl 
@@ -31,15 +36,17 @@ const QuoteCard: React.FC<QuoteCardProps> = ({ text, author, index, onClick }) =
         </div>
         <div className='flex-1 flex flex-col'>
           <p className='text-lg font-medium mb-2 flex-1 dark:text-gray-300'>
-            "{text}"
+            &quot;{text}&quot;
           </p>
           <p className='text-sm text-muted-foreground text-slate-700 dark:text-gray-400'>
             — {author}
           </p>
         </div>
         <div className='mt-4 flex justify-between items-center text-xs text-muted-foreground dark:text-gray-400'>
-          <span>200k views</span>
-          <span>motivation</span>
+          <span className='flex items-center'>
+            <Eye size={18} className='mr-0.5' /> {views}
+          </span>
+          <span className='bg-gray-200 rounded-xl px-2 py-1'>{t('motivation')}</span>
         </div>
       </div>
     </div>
